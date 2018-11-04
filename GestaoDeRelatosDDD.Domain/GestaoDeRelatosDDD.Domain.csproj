@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1E9B74B3-D819-4C32-BD64-086B79ECDF54}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>GestaoDeRelatosDDD.Domain</RootNamespace>
+    <AssemblyName>GestaoDeRelatosDDD.Domain</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Entities\Educador.cs" />
+    <Compile Include="Entities\Educando.cs" />
+    <Compile Include="Entities\Profissao.cs" />
+    <Compile Include="Entities\Tecnico.cs" />
+    <Compile Include="Entities\Oficina.cs" />
+    <Compile Include="Entities\Relato.cs" />
+    <Compile Include="Entities\Turno.cs" />
+    <Compile Include="Entities\Unidade.cs" />
+    <Compile Include="Interfaces\Repositories\IEducadorRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IEducandoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IOficinaRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IProfissaoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRelatoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IRepositoryBase.cs" />
+    <Compile Include="Interfaces\Repositories\ITecnicoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\ITurnoRepository.cs" />
+    <Compile Include="Interfaces\Repositories\IUnidadeRepository.cs" />
+    <Compile Include="Interfaces\Services\IEducadorService.cs" />
+    <Compile Include="Interfaces\Services\IEducandoService.cs" />
+    <Compile Include="Interfaces\Services\IOficinaService.cs" />
+    <Compile Include="Interfaces\Services\IProfissaoService.cs" />
+    <Compile Include="Interfaces\Services\IRelatoService.cs" />
+    <Compile Include="Interfaces\Services\IServiceBase.cs" />
+    <Compile Include="Interfaces\Services\ITecnicoService.cs" />
+    <Compile Include="Interfaces\Services\ITurnoService.cs" />
+    <Compile Include="Interfaces\Services\IUnidadeService.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\EducadorService.cs" />
+    <Compile Include="Services\EducandoService.cs" />
+    <Compile Include="Services\OficinaService.cs" />
+    <Compile Include="Services\ProfissaoService.cs" />
+    <Compile Include="Services\RelatoService.cs" />
+    <Compile Include="Services\ServiceBase.cs" />
+    <Compile Include="Services\TecnicoService.cs" />
+    <Compile Include="Services\TurnoService.cs" />
+    <Compile Include="Services\UnidadeService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

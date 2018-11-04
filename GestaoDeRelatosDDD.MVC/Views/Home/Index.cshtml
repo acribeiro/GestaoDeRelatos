@@ -1,0 +1,51 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+<div class="jumbotron" align="center">
+    <h1>Gestão de Relatos</h1>
+    <p class="lead">Sistema para criação de relatos dos atendimentos aos educandos do projeto Providência.</p>
+    <img src="~/images/prov.png" />
+    @*<p><a href="https://asp.net" class="btn btn-primary btn-lg">Learn more &raquo;</a></p>*@
+</div>
+
+<div class="row" align="center">
+    <div class="col-md-6">
+        <h2>Início</h2>
+        <p>
+            Para criar relatos acesse o menu Relatos na parte superior ou clique no botão abaixo.
+        </p>
+        <p><a class="btn btn-default" href="/Relatos/Create">Criar Relato &raquo;</a></p>
+    </div>
+    <div class="col-md-6">
+        <h2>Relatórios</h2>
+        <p>É possível gerar relatórios dos atendimentos realizados, filtrando por membros da Equipe Técnica e/ou por perído.</p>
+        <p><a class="btn btn-default" href="#">Relatórios &raquo;</a></p>
+    </div>
+    @*<div class="col-md-4">
+            <h2>Web Hosting</h2>
+            <p>You can easily find a web hosting company that offers the right mix of features and price for your applications.</p>
+            <p><a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkId=301867">Learn more &raquo;</a></p>
+        </div>*@
+    @*<button class="btn btn-success" onclick="ListarEducandos();"> <i class="fa fa-search"></i> Pesquisar</button>*@
+</div>
+<script src="~/Scripts/jquery-3.3.1.js"></script>
+<script src="~/Controllers/Educando/Index.js"></script>
+<script>
+    var urlListaEducandos = '@Url.Action("ListarEducandos", "Educandos", new {Area = ""})';
+    ListarEducandos = function () {
+        $.ajax({
+            url: urlListaEducandos,
+            dataType: 'json',
+            type: 'POST',
+            quietMillis: 100,
+            cache: false,
+            success: function (response) {
+                alert('deu bom');
+            },
+            error: function () {
+                alert('deu ruim');
+            }
+        });
+    }
+</script>

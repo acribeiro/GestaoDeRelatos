@@ -1,0 +1,82 @@
+﻿@model IEnumerable<GestaoDeRelatosDDD.MVC.ViewModels.EducandoViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Nome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeDaMae)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomeDoPai)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TelefoneResponsavel)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.UnidadeId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TurnoId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Nome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Sobrenome)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataNascimento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDaMae)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomeDoPai)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TelefoneResponsavel)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Endereco)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.UnidadeId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TurnoId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.EducandoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.EducandoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.EducandoId })
+        </td>
+    </tr>
+}
+
+</table>

@@ -1,0 +1,75 @@
+﻿@model GestaoDeRelatosDDD.MVC.ViewModels.RelatoViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>RelatoViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.RelatoDescricao)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RelatoDescricao)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.RelatoDescricaoCurto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.RelatoDescricaoCurto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Encaminhamento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Encaminhamento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EncaminhamentoCurto)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EncaminhamentoCurto)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataDoRelato)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataDoRelato)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TecnicoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TecnicoId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.EducandoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.EducandoId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.RelatoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

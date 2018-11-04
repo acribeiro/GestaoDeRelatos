@@ -1,0 +1,70 @@
+﻿@model IEnumerable<GestaoDeRelatosDDD.MVC.ViewModels.RelatoViewModel>
+
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.RelatoDescricao)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.RelatoDescricaoCurto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Encaminhamento)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EncaminhamentoCurto)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.DataDoRelato)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.TecnicoId)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.EducandoId)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelatoDescricao)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.RelatoDescricaoCurto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.Encaminhamento)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EncaminhamentoCurto)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.DataDoRelato)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.TecnicoId)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.EducandoId)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.RelatoId }) |
+            @Html.ActionLink("Details", "Details", new { id=item.RelatoId }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.RelatoId })
+        </td>
+    </tr>
+}
+
+</table>

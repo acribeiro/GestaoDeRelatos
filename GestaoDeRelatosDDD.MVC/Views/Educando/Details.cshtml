@@ -1,0 +1,91 @@
+﻿@model GestaoDeRelatosDDD.MVC.ViewModels.EducandoViewModel
+
+@{
+    ViewBag.Title = "Details";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>EducandoViewModel</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Nome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Nome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Sobrenome)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Sobrenome)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.DataNascimento)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.DataNascimento)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDaMae)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeDaMae)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomeDoPai)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomeDoPai)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TelefoneResponsavel)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TelefoneResponsavel)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Endereco)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Endereco)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.UnidadeId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.UnidadeId)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TurnoId)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TurnoId)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.EducandoId }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
